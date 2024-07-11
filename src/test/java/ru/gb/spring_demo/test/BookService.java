@@ -1,9 +1,9 @@
-package ru.gb.spring_demo.service;
+package ru.gb.spring_demo.test;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.gb.spring_demo.repository.BookRepository;
 import ru.gb.spring_demo.model.Book;
+import ru.gb.spring_demo.repository.BookRepository;
 
 import java.util.List;
 import java.util.NoSuchElementException;

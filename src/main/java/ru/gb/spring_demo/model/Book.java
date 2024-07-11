@@ -18,6 +18,17 @@ public class Book {
     private long id;
     private String name;
 
+    public static long getSequence() {
+        return sequence;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public String getName() {
+        return name;
+    }
 
     public Book(String name) {
         this.id = sequence++;

@@ -1,4 +1,4 @@
-package ru.gb.spring_demo.dao;
+package ru.gb.spring_demo.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;

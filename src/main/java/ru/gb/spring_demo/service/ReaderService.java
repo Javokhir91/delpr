@@ -2,15 +2,13 @@ package ru.gb.spring_demo.service;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import ru.gb.spring_demo.dao.IssueRepository;
-import ru.gb.spring_demo.dao.ReaderRepository;
-import ru.gb.spring_demo.model.Book;
+import ru.gb.spring_demo.repository.IssueRepository;
+import ru.gb.spring_demo.repository.ReaderRepository;
 import ru.gb.spring_demo.model.Issue;
 import ru.gb.spring_demo.model.Reader;
 
 import java.util.List;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 
 @Service
 public class ReaderService {

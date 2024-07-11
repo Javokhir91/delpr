@@ -16,6 +16,30 @@ public class Reader {
     private long id;
     private String name;
 
+    public static long getSequence() {
+        return sequence;
+    }
+
+    public static void setSequence(long sequence) {
+        Reader.sequence = sequence;
+    }
+
+    public long getId() {
+        return id;
+    }
+
+    public void setId(long id) {
+        this.id = id;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Reader(String name) {
         this.id = sequence++;
         this.name = name;

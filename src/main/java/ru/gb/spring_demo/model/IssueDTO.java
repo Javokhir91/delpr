@@ -1,23 +1,34 @@
 package ru.gb.spring_demo.model;
 
+
 import java.time.LocalDateTime;
 
 public class IssueDTO {
-
     private Long id;
-    private String bookTitle;
-    private String readerName;
-    private LocalDateTime issueAt;
-    private LocalDateTime returnAt;
+    private String title;
+    private String description;
+    private String status;
+    private LocalDateTime createdDate;
+    private LocalDateTime updatedDate;
 
-    public IssueDTO(Long id, String bookTitle, String readerName, LocalDateTime issueAt, LocalDateTime returnAt) {
-        this.id = id;
-        this.bookTitle = bookTitle;
-        this.readerName = readerName;
-        this.issueAt = LocalDateTime.now();
-        this.returnAt = returnAt;
+    // Конструктор без параметров
+    public IssueDTO() {
     }
 
+    // Конструктор с параметрами
+    public IssueDTO(Long id, String title, String description, String status, LocalDateTime createdDate, LocalDateTime updatedDate) {
+        this.id = id;
+        this.title = title;
+        this.description = description;
+        this.status = status;
+        this.createdDate = createdDate;
+        this.updatedDate = updatedDate;
+    }
+
+    public IssueDTO(Long id, String name, String name1, LocalDateTime issueAt, LocalDateTime returnAt) {
+    }
+
+    // Геттеры и сеттеры
     public Long getId() {
         return id;
     }
@@ -26,38 +37,55 @@ public class IssueDTO {
         this.id = id;
     }
 
-    public String getBookTitle() {
-        return bookTitle;
+    public String getTitle() {
+        return title;
     }
 
-    public void setBookTitle(String bookTitle) {
-        this.bookTitle = bookTitle;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
-    public String getReaderName() {
-        return readerName;
+    public String getDescription() {
+        return description;
     }
 
-    public void setReaderName(String readerName) {
-        this.readerName = readerName;
+    public void setDescription(String description) {
+        this.description = description;
     }
 
-    public LocalDateTime getIssueAt() {
-        return issueAt;
+    public String getStatus() {
+        return status;
     }
 
-    public void setIssueAt(LocalDateTime issueAt) {
-        this.issueAt = issueAt;
+    public void setStatus(String status) {
+        this.status = status;
     }
 
-    public LocalDateTime getReturnAt() {
-        return returnAt;
+    public LocalDateTime getCreatedDate() {
+        return createdDate;
     }
 
-    public void setReturnAt(LocalDateTime returnAt) {
-        this.returnAt = returnAt;
+    public void setCreatedDate(LocalDateTime createdDate) {
+        this.createdDate = createdDate;
     }
 
+    public LocalDateTime getUpdatedDate() {
+        return updatedDate;
+    }
 
+    public void setUpdatedDate(LocalDateTime updatedDate) {
+        this.updatedDate = updatedDate;
+    }
 
+    @Override
+    public String toString() {
+        return "IssueDTO{" +
+                "id=" + id +
+                ", title='" + title + '\'' +
+                ", description='" + description + '\'' +
+                ", status='" + status + '\'' +
+                ", createdDate=" + createdDate +
+                ", updatedDate=" + updatedDate +
+                '}';
+    }
 }
